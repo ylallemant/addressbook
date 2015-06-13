@@ -46,8 +46,12 @@ Otherwise, here is the url (also logged to the console)
 To make the processing visible, you may add the parameter `debug`
 
     http://localhost:8080/questions?debug=true
-    http://localhost:8080/questions?debug=false
-    http://localhost:8080/questions (same as with false)
+    http://localhost:8080/questions?debug=false (default)
+
+Caching can be disabled with the parameter `cache` or the header `Cache-Control: no-cache`
+
+    http://localhost:8080/questions?cache=false
+    http://localhost:8080/questions?cache=true (default)
     
 
 ------------
