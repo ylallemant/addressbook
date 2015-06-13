@@ -20,7 +20,8 @@ here is a solution using only native Node.js modules for the sake of sports - us
 ### Database
  
  - storage and indexing performed by our own "database" modules
- - any insert or index update changes a database revision number
+ - define indexes based on the stored Object parameters
+ - any Object insert or index update changes a database revision number
  - detection and filtering of duplicate entries
  - auto indexing on insert
  
