@@ -8,7 +8,7 @@ here is a solution using only native Node.js modules for the sake of sports - us
 
 Advanced Feature:
 
- - reading datafile with [Stream Module](https://nodejs.org/api/stream.html) line by line
+ - reading datafile with [Stream Module](https://nodejs.org/api/stream.html) line by line - who knows maybe you habe some GB address file laying around
  - parsing text format entries into an Array of Objects
  - both reading and parsing are done in a child process to avoid blocking
  - entry objects are streamed one by one to the parent process for storage and indexing
