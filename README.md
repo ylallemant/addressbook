@@ -7,7 +7,7 @@ Address Book Task (see PDF file): this is about showing off knowledge, I made my
 
 here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
 
-## Advanced Feature
+## Advanced Features
 
 ### Datafile Handling
 
@@ -31,6 +31,7 @@ here is a solution using only native Node.js modules for the sake of sports - us
  - cache response for performance based on database revision number
  - caching and debugging can be enabled/disabled [through url query parameters](#query_params)
  
+-----
 
 ## Installation
 
@@ -50,6 +51,8 @@ here is a solution using only native Node.js modules for the sake of sports - us
     node lib/addressbook.js [datafile_absolute_path1] [datafile_absolute_path2] ... [datafile_absolute_pathN]
 
 Loads a test datafile if none was provided.
+
+-----
 
 ## Web Service
 
