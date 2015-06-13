@@ -3,7 +3,8 @@
 [![David](https://img.shields.io/david/ylallemant/addressbook.svg?style=flat)](https://david-dm.org/ylallemant/addressbook)
 [![David](https://img.shields.io/david/dev/ylallemant/addressbook.svg?style=flat)](https://david-dm.org/ylallemant/addressbook#info=devDependencies)
 
-Address Book Task (see PDF file): this is about showing off knowledge, therefore here is a solution using only Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
+Address Book Task (see PDF file): this is about showing off knowledge, I made my best:
+here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
 
 Advanced Feature:
 
@@ -14,6 +15,7 @@ Advanced Feature:
  - storage and indexing performed by our own "database" modules
  - detection of duplicate entries
  - implement simple Web service with the [HTTP Module](https://nodejs.org/api/http.html)
+ - opens the broswer on Windows and OSX upon [net::listening event](https://nodejs.org/api/net.html#net_event_listening)
  - cache response for performance based on database revision number
  - update data on datafile changes using [fs.watchFile](https://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener)
 
@@ -33,7 +35,9 @@ Advanced Feature:
 
 ### Run Address Book Service
 
-    node lib/addressbook.js;
+    node lib/addressbook.js [datafile_absolute_path1] [datafile_absolute_path2] ... [datafile_absolute_pathN]
+
+Loads a test datafile if none was provided.
 
 ## Web Service
 

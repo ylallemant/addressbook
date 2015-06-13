@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         options: {
           bail: true,
           "no-exit": true,
-          reporter: 'dot'
+          reporter: 'spec'
         },
         src: ['test/**/*.spec.js']
       }
