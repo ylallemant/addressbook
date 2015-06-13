@@ -3,9 +3,9 @@
 [![David](https://img.shields.io/david/ylallemant/addressbook.svg?style=flat)](https://david-dm.org/ylallemant/addressbook)
 [![David](https://img.shields.io/david/dev/ylallemant/addressbook.svg?style=flat)](https://david-dm.org/ylallemant/addressbook#info=devDependencies)
 
-Address Book Task (see PDF file): this is about showing off knowledge, I made my best...
+Address Book Task ([see PDF file](task-addressbook.pdf)): this is about showing off knowledge, I made my best...
 
-here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
+Here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
 
 ## Advanced Features
 
