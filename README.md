@@ -9,7 +9,7 @@ Here is a solution using only native Node.js modules for the sake of sports - us
 
 ## Advanced Features
 
-### Datafile Handling
+### [Datafile Handling](lib/file/)
 
  - reading datafile with [Stream Module](https://nodejs.org/api/stream.html) line by line - who knows maybe you have some GB address file laying around
  - update data on datafile changes using [fs.watchFile](https://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener)
@@ -17,7 +17,7 @@ Here is a solution using only native Node.js modules for the sake of sports - us
  - both reading and parsing are done in a child process to avoid blocking
  - entry objects are streamed one by one to the parent process for storage and indexing
  
-### Database
+### [Database](lib/db/)
  
  - storage and indexing performed by our own "database" modules
  - define indexes based on the stored Object parameters
@@ -25,7 +25,7 @@ Here is a solution using only native Node.js modules for the sake of sports - us
  - detection and filtering of duplicate entries
  - auto indexing on insert
  
-### Web Service
+### [Web Service](lib/api/)
  
  - implement simple Web service with the [HTTP Module](https://nodejs.org/api/http.html)
  - opens the broswer on Windows and OSX upon [net::listening event](https://nodejs.org/api/net.html#net_event_listening)
