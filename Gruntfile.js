@@ -13,6 +13,15 @@ module.exports = function(grunt) {
     jshint: {
       all: ['package.json', 'Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
     },
+    watch: {
+      scripts: {
+        files: '**/*.js',
+        tasks: ['default'],
+        options: {
+          livereload: true
+        }
+      }
+    },
     mochaTest: {
       test: {
         options: {

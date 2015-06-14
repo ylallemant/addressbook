@@ -3,6 +3,7 @@
 /* global describe */
 /* global it */
 'use strict';
+
 require('chai').should();
 var expect = require('chai').expect;
 
@@ -12,7 +13,7 @@ var options  = require('../../lib/options.json');
 
 options.debug = false;
 
-describe('Caching Lib:', function(){
+describe('Server - Caching Lib:', function(){
 
   it('should have a property "ETAG_REQUEST_HEADER"', function(){
     cacheLib.should.have.property('ETAG_REQUEST_HEADER');
@@ -89,6 +90,7 @@ describe('Caching Lib:', function(){
 
     var url  = '/Answer/to/the/Ultimate/Question/of/Life/The/Universe/and/Everything';
     var etag = '42';
+    var currentEtag = '42';
     var requestContext = {
       headers: {},
       url: url
@@ -97,26 +99,26 @@ describe('Caching Lib:', function(){
     options.cache = true;
 
     it('that ignores on empty header', function(){
-      expect(cacheLib.check(requestContext)).to.be.false;
+      expect(cacheLib.check(requestContext, currentEtag)).to.be.false;
     });
 
     it('that ignores on option.cache === false', function(){
       options.cache = false;
       requestContext.headers[cacheLib.ETAG_REQUEST_HEADER] = etag;
-      expect(cacheLib.check(requestContext)).to.be.false;
+      expect(cacheLib.check(requestContext, currentEtag)).to.be.false;
     });
 
     it('that ignores unknown url', function(){
       options.cache = true;
       requestContext.url = 'unknown';
-      expect(cacheLib.check(requestContext)).to.be.false;
+      expect(cacheLib.check(requestContext, currentEtag)).to.be.false;
     });
 
     it('that matches on option.cache=true', function(){
       options.cache = true;
       requestContext.url = url;
 
-      expect(cacheLib.check(requestContext)).to.be.true;
+      expect(cacheLib.check(requestContext, currentEtag)).to.be.true;
     });
 
     it('that deletes cache on Etag mismatch', function(){
@@ -124,7 +126,7 @@ describe('Caching Lib:', function(){
       requestContext.url = url;
       requestContext.headers[cacheLib.ETAG_REQUEST_HEADER] = 22;
 
-      expect(cacheLib.check(requestContext)).to.be.false;
+      expect(cacheLib.check(requestContext, currentEtag)).to.be.false;
       cache.should.not.have.property(url);
     });
   });
