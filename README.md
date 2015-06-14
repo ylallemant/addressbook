@@ -11,6 +11,7 @@ Here is a solution using only native Node.js modules for the sake of sports - us
 
 ### [Datafile Handling](lib/file/)
 
+ - custom datafiles can be provided on script start
  - reading datafile with [Stream Module](https://nodejs.org/api/stream.html) line by line - who knows maybe you have some GB address file laying around
  - update data on datafile changes using [fs.watchFile](https://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener)
  - parsing text format entries into an Array of Objects
@@ -21,12 +22,13 @@ Here is a solution using only native Node.js modules for the sake of sports - us
  
  - storage and indexing performed by our own "database" modules
  - define indexes based on the stored Object parameters
- - any Object insert or index update changes a database revision number
+ - any Object insert, delete or index update changes a database revision number
  - detection and filtering of duplicate entries
  - auto indexing on insert
  
 ### [Web Service](lib/api/)
  
+ - a port number can be specified on script start
  - implement simple Web service with the [HTTP Module](https://nodejs.org/api/http.html)
  - opens the broswer on Windows and OSX upon [net::listening event](https://nodejs.org/api/net.html#net_event_listening)
  - cache response for performance based on database revision number
@@ -49,7 +51,7 @@ Here is a solution using only native Node.js modules for the sake of sports - us
 
 ### Run Address Book Service
 
-    node lib/addressbook.js [datafile_absolute_path1] [datafile_absolute_path2] ... [datafile_absolute_pathN]
+    node lib/addressbook.js [port_number] [datafile_absolute_path1] [datafile_absolute_path2] ... [datafile_absolute_pathN]
 
 Loads a test datafile if none was provided.
 

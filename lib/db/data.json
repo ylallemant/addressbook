@@ -1,7 +1,10 @@
 {
   "revision": 0,
+  "sources": {},
+  "imports": {},
   "indexes": {
     "byId": {}
   },
+  "meta": {},
   "data": []
 }
