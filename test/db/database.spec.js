@@ -67,9 +67,9 @@ describe('DB - Database Lib:', function() {
     db.update.should.be.a('function');
   });
 
-  it('should have a method "closeImport"', function() {
-    db.should.have.property('closeImport');
-    db.closeImport.should.be.a('function');
+  it('should have a method "commit"', function() {
+    db.should.have.property('commit');
+    db.commit.should.be.a('function');
   });
 
   it('should have a method "createIndex"', function() {
@@ -206,7 +206,7 @@ describe('DB - Database Lib:', function() {
       raw.imports[source].length.should.equal(1);
       raw.imports[source][0].should.deep.equal(raw.data[0]);
 
-      db.closeImport(source);
+      db.commit(source);
 
       raw.data.length.should.equal(1);
       raw.revision.should.equal(12);
