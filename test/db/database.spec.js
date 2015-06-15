@@ -203,7 +203,7 @@ describe('DB - Database Lib:', function() {
     });
 
     it('removes non updated entries: male', function() {
-      raw.imports[source].length.should.equal(1);
+      raw.imports[source].length.should.equal(2);
       raw.imports[source][0].should.deep.equal(raw.data[0]);
 
       db.commit(source);
