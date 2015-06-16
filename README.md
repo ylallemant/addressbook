@@ -5,7 +5,7 @@
 
 Address Book Task ([see PDF file](task-addressbook.pdf)): this is about showing off knowledge, I made my best...
 
-Here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be to easy
+Here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be too easy
 
 ## Advanced Features
 
