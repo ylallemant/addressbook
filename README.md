@@ -23,8 +23,8 @@ The code used to answer the task questions can be found in [lib/api/endpoints/qu
 ### [Database](lib/db/)
  
  - storage and indexing performed by our own "database" modules
- - define indexes based on the stored Object parameters
- - any Object insert, delete or index update changes a database revision number
+ - define indexes based on the stored object properties
+ - any object insert, delete or index update changes a database revision number
  - detection and filtering of duplicate entries
  - auto indexing on insert
  
