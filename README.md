@@ -7,6 +7,8 @@ Address Book Task ([see PDF file](task-addressbook.pdf)): this is about showing 
 
 Here is a solution using only native Node.js modules for the sake of sports - using packages like [express](https://www.npmjs.com/package/express) would be too easy
 
+The code used to answer the task questions can be found in [lib/api/endpoints/questions.js](lib/api/endpoints/questions.js).
+
 ## Advanced Features
 
 ### [Datafile Handling](lib/file/)
